@@ -1,19 +1,25 @@
 package rogue.map;
-
 import java.util.Random;
+import rogue.map.Tile;
+import rogue.map.TileType;
+
 
 public class GameMap {
-    public static final int WIDTH = 40;
-    public static final int HEIGHT = 20;
-
-    private Tile[][] tiles;
+    int floor = 0;
+    int startX = 0;
+    int startY = 0;
+    public static final int WIDTH = 80;
+    public static final int HEIGHT = 40;
+    
+    public Tile[][] tiles;
 
     public GameMap() {
         tiles = new Tile[WIDTH][HEIGHT];
         generateRandomMap();
+        floor++;
     }
 
-    private void generateRandomMap() {
+    public void generateRandomMap() {
         // Fill with walls
         for (int x = 0; x < WIDTH; x++) {
             for (int y = 0; y < HEIGHT; y++) {
@@ -46,6 +52,7 @@ public class GameMap {
         }
     }
 
+    
     public Tile getTile(int x, int y) {
         return tiles[x][y];
     }
@@ -57,4 +64,13 @@ public class GameMap {
     public int getHeight() {
         return HEIGHT;
     }
+
+    private int[] entrance = new int[2];
+    private int[] exit = new int[2];
+
+    public void setEntrance(int x, int y) { entrance[0] = x; entrance[1] = y; }
+    public void setExit(int x, int y) { exit[0] = x; exit[1] = y; }
+
+    public int[] getEntrance() { return entrance; }
+    public int[] getExit() { return exit; }
 }

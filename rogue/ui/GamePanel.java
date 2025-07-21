@@ -52,5 +52,15 @@ public class GamePanel extends JPanel {
             g.setFont(new Font("Arial", Font.BOLD, 12));
             g.drawString("" + enemy.getHp(), enemy.getX() * tileSize + 7, enemy.getY() * tileSize + 18);
         }
+        if (enemies.isEmpty()) {
+            int[] exit = gameMap.getExit();
+            g.setColor(Color.GREEN);
+            g.fillRect(exit[0] * tileSize, exit[1] * tileSize, tileSize, tileSize);
+            g.setColor(Color.BLACK);
+            g.drawRect(exit[0] * tileSize, exit[1] * tileSize, tileSize, tileSize);
+        }
+
     }
+
+        
 }

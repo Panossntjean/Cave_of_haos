@@ -1,6 +1,7 @@
 package rogue.ui;
 
 import rogue.player.*;
+import rogue.map.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +12,8 @@ public class PlayerStatusPanel extends JPanel {
 
     public PlayerStatusPanel(Player player) {
         this.player = player;
-        setLayout(new GridLayout(3, 1));
-        setPreferredSize(new Dimension(200, 60));
+        setLayout(new GridLayout(2, 1));
+        setPreferredSize(new Dimension(200, 200));
         statusLabel = new JLabel();
         add(statusLabel);
         updateStatus();
@@ -21,9 +22,10 @@ public class PlayerStatusPanel extends JPanel {
     public void updateStatus() {
         statusLabel.setText(
             "<html>Position: (" + player.getX() + ", " + player.getY() + ")<br>" +
-            "HP: " + player.getHp() + " / " + player.getMaxHp() + "</html>"
+            "HP: " + player.getHp() + " / " + player.getMaxHp() +"<br>" +
             "Level: " + player.getLevel() + "<br>" +
-            "XP: " + player.getXp() + "</html>"
+            "XP: " + player.getXp() + "<br>" + "</html>"
+            //"floor:"+ gameWorld.getFloor() + "</html>"
         );
     }
 }
