@@ -142,8 +142,9 @@ public class Main {
                                 Item bossDrop = new GemOfJudgement();
                                 currentMap.getTile(en.getX(), en.getY()).setItem(bossDrop);
                             }
+                            it.remove();
                         }
-                        it.remove();
+                        
                     }
                     playerAttacked = true;
 
@@ -250,5 +251,6 @@ public class Main {
         }
         return mapData;
     }
+
 
 }
