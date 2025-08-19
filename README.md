@@ -1,3 +1,1 @@
-TEO , BALTO NA PAIXEI NA DEIS TA VISIBILITY KTLP. AMA THES NA KANEIS ALLAGI NOMIZW MPOREIS KAI META TA VLEPV EGW TI ALLAXE KTLP , KANE KAI PES MOU 
-
-Thelei akoma treli douleia TEO!
+Run the game via rungame with powershell of windows or inside a cmd window with the command " .\RunGame.ps1"
