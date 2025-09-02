@@ -4,5 +4,4 @@ A rogue like game made in Java. Play against difficult enemies and find the Gem 
 
 Requirments : JDK 17 or newer. 
 
-Run the game via RunGame with powershell of windows OR open a cmd window on the root folder and then command " .\RunGame.ps1"
-Else one can simply compile all files and run Main
+Run the game via RunGame with powershell of windows OR open a cmd window on the root folder and then command " .\RunGame.ps1"/nElse one can simply compile all files and run Main
