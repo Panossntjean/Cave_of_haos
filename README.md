@@ -1,4 +1,4 @@
-**Cave of haos** 
+**Cave of Chaos** 
 
 A rogue like game made in Java. Play against difficult enemies and find the Gem of Judgment to win the game ! 
 
